@@ -13,7 +13,7 @@ Entropy is measured in bits, and relates to the number of brute force atempts a 
 
 
 
-See [here][2] for the orignal motovation (and a much better explanation), behind the zxcvbn.js library.
+See [here][2] for the orignal motivation (and a much better explanation), behind the zxcvbn.js library.
 
 
 
