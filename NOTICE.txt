@@ -1,0 +1,16 @@
+The following files are licensed under the MIT License:
+
+
+js/zxcvbn.js                Copyright (c) 2012 Dropbox, Inc. 
+(note this file is also embedding into zxcvbn.dll)
+
+js/zxcvbn-async.js          Copyright (c) 2012 Dropbox, Inc.
+
+------------------------------------------------------------
+
+
+     
+
+The following files are licensed under the Microsoft Public License (Ms-PL):
+
+jurassic.dll                  Copyright © Paul Bartrum 2010
