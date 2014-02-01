@@ -67,10 +67,13 @@
     <Content Include="js\zxcvbn-async.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="libs\Jurassic.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="libs\Jurassic-License.txt" />
     <EmbeddedResource Include="js\zxcvbn.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Resource Include="libs\Jurassic.dll" />
     <EmbeddedResource Include="Properties\Resources.fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.fr.Designer.cs</LastGenOutput>
@@ -84,10 +87,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libs\PostBuild.bat" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>ilmerge  /out:$(TargetDir)zxcvbn.dll $(TargetDir)zxcvbn.net.dll $(TargetDir)Jurassic.dll
+xcopy /y  $(TargetDir)zxcvbn.net.dll $(TargetDir)zxcvbn.dllx
+xcopy /y $(TargetDir)zxcvbn.dll C:\temp\$(TargetFileName)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

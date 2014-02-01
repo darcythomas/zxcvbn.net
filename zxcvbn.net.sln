@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PerformanceTest", "Performa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceTest", "PerformanceTest\PerformanceTest.csproj", "{278561B2-9BD1-4F84-AFD1-9BC1459CB610}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zxcvbnNuget", "zxcvbnNuget\zxcvbnNuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoSite", "DemoSite\DemoSite.csproj", "{0586C5D4-BFB9-4FE1-AA20-4B410D8F1192}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,14 +33,19 @@ Global
 		{278561B2-9BD1-4F84-AFD1-9BC1459CB610}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{278561B2-9BD1-4F84-AFD1-9BC1459CB610}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{278561B2-9BD1-4F84-AFD1-9BC1459CB610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0586C5D4-BFB9-4FE1-AA20-4B410D8F1192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0586C5D4-BFB9-4FE1-AA20-4B410D8F1192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0586C5D4-BFB9-4FE1-AA20-4B410D8F1192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0586C5D4-BFB9-4FE1-AA20-4B410D8F1192}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{278561B2-9BD1-4F84-AFD1-9BC1459CB610} = {3204A2BA-ADFD-4AA8-8159-CF93AF239D26}
-	EndGlobalSection
-	GlobalSection(Performance) = preSolution
-		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal
