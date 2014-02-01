@@ -8,9 +8,8 @@ js/zxcvbn-async.js          Copyright (c) 2012 Dropbox, Inc.
 
 ------------------------------------------------------------
 
-
      
 
-The following files are licensed under the Microsoft Public License (Ms-PL):
+The following files (embedded components)are licensed under the Microsoft Public License (Ms-PL):
 
 jurassic.dll                  Copyright � Paul Bartrum 2010
