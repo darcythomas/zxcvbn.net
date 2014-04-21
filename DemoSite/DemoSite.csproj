@@ -237,6 +237,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap2\bootstrap-switch.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap2\bootstrap-switch.min.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap3\bootstrap-switch.css" />
+    <Content Include="Content\bootstrap-switch\bootstrap3\bootstrap-switch.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -250,6 +254,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\bootstrap-switch.js" />
+    <Content Include="Scripts\bootstrap-switch.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -275,13 +281,10 @@
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
-    <Content Include="Scripts\knockout-3.0.0.debug.js" />
-    <Content Include="Scripts\knockout-3.0.0.js" />
     <Content Include="Scripts\knockout-3.1.0.debug.js" />
     <Content Include="Scripts\knockout-3.1.0.js" />
     <Content Include="Scripts\knockout.validation.debug.js" />
     <Content Include="Scripts\knockout.validation.js" />
-    <Content Include="Scripts\modernizr-2.7.1.js" />
     <Content Include="Scripts\modernizr-2.7.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
