@@ -35,12 +35,19 @@ namespace DemoSite
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                 "~/Scripts/modernizr-*"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/zxcvbn").Include(
+                "~/Scripts/zxcvbn-async.js",
+                "~/Scripts/zxcvbn.js"));   
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                 "~/Scripts/bootstrap.js",
+                "~/Scripts/bootstrap-switch.js",
                 "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/bootstrap.css",
+                 "~/Content/bootstrap-switch/bootstrap3/bootstrap-switch.css",
                  "~/Content/Site.css"));
         }
     }
