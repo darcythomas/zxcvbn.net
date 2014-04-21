@@ -6,11 +6,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>zxcvbn .Net Demo</title>
+    <title>zxcvbn .net Demo</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/zxcvbn")
 </head>
 <body>
     <div data-bind="visible: loading">Loading...</div>
@@ -46,18 +50,18 @@
         </div>
         @Html.Partial("_Home")
         @* @Html.Partial("_Login")*@
-        @*@Html.Partial("_Register")*@
+       
         @Html.Partial("PasswordChecker")
-        @Html.Partial("_RegisterExternal")
-        @Html.Partial("_Manage")
+        @*@Html.Partial("_RegisterExternal")*@
+        @*@Html.Partial("_Manage")*@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - DarcyIO</p>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/knockout")
+
+   
     @Scripts.Render("~/bundles/app")
     @Scripts.Render("~/bundles/bootstrap")
 </body>
