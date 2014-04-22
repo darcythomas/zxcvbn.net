@@ -7,32 +7,21 @@ using zxcvbn.net;
 namespace zxcvbnTests
 {
     [TestClass]
-    public class UnitTests
+    public class zxcvbnUnitTests
     {
-
         const string LamePassword = "Passw0rd1!"; // 6 bits of entropy 
 
-      
-        [TestMethod]
-        public void HelloCode()
-        {
-            Assert.IsTrue(true, "Hello world unit test");
-        }
 
-        /// <summary>
-        /// This is a sanity check test to make sure that Jurassic js has loaded correctly 
-        /// </summary>
         [TestMethod]
-        public void CanSetAndGetGlobalVariable()
+        public void StartUpTest()
         {
             ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
 
-            zxcvbn.Engine.SetGlobalValue("GlobalVariable", LamePassword);
-            string actual = zxcvbn.Engine.GetGlobalValue<string>("GlobalVariable");
-
-            Assert.AreEqual(LamePassword, actual);
+            const int zero = 0;
+            int actual = zxcvbn.Score(LamePassword);
+            Assert.AreEqual(zero, actual);
         }
-
+   
         [TestMethod]
         public void ScoreIsZeroWithLamePassword()
         {
@@ -64,5 +53,14 @@ namespace zxcvbnTests
             zxcvbn.Score(excessivelyLongPassword);
         }
 
+        [TestMethod]
+        public void LongPassword()
+        {
+
+            String excessivelyLongPassword = "For once you have tasted flight you will walk the earth with your eyes turned skywards, for there you have been and there you will long to return. -- Leonardo da Vinci ";
+
+            ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
+            zxcvbn.Score(excessivelyLongPassword);
+        }
     }
 }
