@@ -10,6 +10,7 @@ namespace zxcvbnTests
     public class zxcvbnUnitTests
     {
         const string LamePassword = "Passw0rd1!"; // 6 bits of entropy 
+        const string ReasonablePassword = "Life is wasted on the living. -- Douglas Adams";
 
 
         [TestMethod]
@@ -43,6 +44,26 @@ namespace zxcvbnTests
         }
 
         [TestMethod]
+        public void CrackTimeBasic()
+        {
+            ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
+
+            var actual = zxcvbn.crack_time(LamePassword);
+            const int expected = 0;
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void CrackTimeReasonablePassword()
+        {
+            ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
+
+            var actual = zxcvbn.crack_time(ReasonablePassword);
+            const int expected = 0;
+            Assert.AreEqual(expected, actual, "actual: " + actual);
+        }
+
+
+        [TestMethod]
         [ExpectedException(typeof(InvalidDataException))]
         public void PasswordTooLong()
         {
@@ -53,6 +74,27 @@ namespace zxcvbnTests
             zxcvbn.Score(excessivelyLongPassword);
         }
 
+
+
+
+        [TestMethod]
+       
+        public void PasswordTooLongx()
+        {
+            const int maxLength = 4096;
+            String excessivelyLongPassword = new string('x', maxLength - 1);
+
+            ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
+          var q =  zxcvbn.calculation_time(excessivelyLongPassword);
+
+          Assert.IsTrue(false, "Score: " + q);
+        }
+
+
+
+
+
+
         [TestMethod]
         public void LongPassword()
         {
@@ -62,5 +104,23 @@ namespace zxcvbnTests
             ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
             zxcvbn.Score(excessivelyLongPassword);
         }
+
+        //[TestMethod]
+        //public void TimesOutAfter300ms()
+        //{
+        //    int maxMilliseconds = 300;
+        //    Stopwatch sw = new Stopwatch();
+        //    String excessivelyLongPassword = "For once you have tasted flight you will walk the earth with your eyes turned skywards, for there you have been and there you will long to return. -- Leonardo da Vinci ";
+
+            
+        //    ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
+        //    zxcvbn.Score(LamePassword); //Incase this is the first test to be run we need to warm up (initlise the singlton) first.
+
+        //    sw.Start();
+        //    zxcvbn.Score(excessivelyLongPassword);
+        //    sw.Stop();
+
+        //    Assert.IsTrue(sw.ElapsedMilliseconds <= maxMilliseconds);
+        //}
     }
 }
