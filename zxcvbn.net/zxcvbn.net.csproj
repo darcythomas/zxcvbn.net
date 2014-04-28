@@ -37,6 +37,7 @@
       <HintPath>libs\Jurassic.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -61,7 +62,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ValidationAttributes\PasswordEntropy.cs" />
+    <Compile Include="ValidationAttributes\StrongPassword.cs" />
     <Compile Include="Zxcvbn.cs" />
+    <Compile Include="ValidationAttributes\VeryStrongPassword.cs" />
     <Compile Include="ZxcvbnInstance.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,8 +106,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>ilmerge  /out:$(TargetDir)zxcvbn.dll $(TargetDir)zxcvbn.net.dll $(TargetDir)Jurassic.dll
-xcopy /y  $(TargetDir)zxcvbn.net.dll $(TargetDir)zxcvbn.dllx
-xcopy /y $(TargetDir)zxcvbn.dll C:\temp\$(TargetFileName)</PostBuildEvent>
+</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
