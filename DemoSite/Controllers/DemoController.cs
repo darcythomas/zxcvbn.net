@@ -10,7 +10,7 @@ namespace DemoSite.Controllers
     {
         //
         // GET: /Demo/
-        public ActionResult Index()
+        public ActionResult SignIn(SignIn signin)
         {
             return View();
         }
