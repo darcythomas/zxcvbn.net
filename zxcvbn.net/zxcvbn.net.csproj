@@ -79,6 +79,7 @@
     <Content Include="libs\Jurassic-License.txt" />
     <Content Include="Scripts\mousetrap.js" />
     <Content Include="Scripts\mousetrap.min.js" />
+    <Content Include="tools\ILMerge.exe" />
     <EmbeddedResource Include="js\zxcvbn.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -105,8 +106,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>ilmerge  /out:$(TargetDir)zxcvbn.dll $(TargetDir)zxcvbn.net.dll $(TargetDir)Jurassic.dll
-</PostBuildEvent>
+    <PostBuildEvent>$(ProjectDir)\tools\ILMerge.exe /out:$(TargetDir)zxcvbn.dll $(TargetDir)zxcvbn.net.dll $(TargetDir)Jurassic.dll
+xcopy /y  $(TargetDir)zxcvbn.net.dll $(TargetDir)zxcvbn.dll
+echo  $(TargetDir)zxcvbn.dll</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
