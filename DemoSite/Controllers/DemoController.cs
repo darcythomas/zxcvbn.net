@@ -12,7 +12,11 @@ namespace DemoSite.Controllers
         // GET: /Demo/
         public ActionResult SignIn(SignIn signin)
         {
-            return View();
-        }
-	}
+
+            if (!ModelState.IsValid)
+            { return Json(ModelState.First()); }
+
+            return Json(true);
+        }       
+    }
 }
