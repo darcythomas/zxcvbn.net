@@ -107,8 +107,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>$(ProjectDir)\tools\ILMerge.exe /out:$(TargetDir)zxcvbn.dll $(TargetDir)zxcvbn.net.dll $(TargetDir)Jurassic.dll
-xcopy /y  $(TargetDir)zxcvbn.net.dll $(TargetDir)zxcvbn.dll
-echo  $(TargetDir)zxcvbn.dll</PostBuildEvent>
+xcopy /y  $(TargetDir)zxcvbn.dll $(TargetDir)zxcvbn.net.dll 
+</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
