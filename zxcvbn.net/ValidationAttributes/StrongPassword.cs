@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 namespace zxcvbn.net
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true, Inherited = false)]
-    class StrongPassword : ValidationAttribute
+    public class StrongPassword : ValidationAttribute
     {
         public StrongPassword() : base("Password needs to be stronger") { }
 

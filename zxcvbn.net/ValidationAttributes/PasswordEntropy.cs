@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 namespace zxcvbn.net
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = true, Inherited = false)]
-    class PasswordEntropy : ValidationAttribute
+    public class PasswordEntropy : ValidationAttribute
     {
         public int _entropy { get; private set; }
         public PasswordEntropy(int entropy) : base("Password needs to be stronger") { _entropy = entropy; }
