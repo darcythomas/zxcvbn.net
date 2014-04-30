@@ -12,7 +12,7 @@ namespace DemoSite.Controllers
         
         [Required]
         public String UserName { get; set; }
-        [StrongPassword]
+        [PasswordEntropy(33)]
         public String Password { get; set; }       
     }
 }
