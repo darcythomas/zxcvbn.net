@@ -6,8 +6,6 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using JavaScriptEngineSwitcher.Core;
-using Jurassic;
-using Jurassic.Library;
 using zxcvbn.net.Properties;
 
 

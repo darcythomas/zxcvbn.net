@@ -24,8 +24,8 @@ namespace zxcvbnTests
         {
             ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
 
-            zxcvbn.Engine.SetGlobalValue("GlobalVariable", LamePassword);
-            string actual = zxcvbn.Engine.GetGlobalValue<string>("GlobalVariable");
+            zxcvbn.Engine.SetVariableValue("GlobalVariable", LamePassword);
+            string actual = zxcvbn.Engine.GetVariableValue<string>("GlobalVariable");
 
             Assert.AreEqual(LamePassword, actual);
         }
