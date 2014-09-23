@@ -22,7 +22,7 @@ namespace zxcvbn.net
             return Instance.Entropy(password);
         }
 
-        public static int crack_time(String password)
+        public static double crack_time(String password)
         {
             return Instance.crack_time(password);
         }

@@ -62,9 +62,9 @@ namespace zxcvbn.net
 
 
 
-        public int crack_time(String password)
+        public double crack_time(String password)
         {
-            return CallJSzxcvbnFunction<int>(password, "crack_time");
+            return CallJSzxcvbnFunction<double>(password, "crack_time");
            
         }
         public String crack_time_display(String password)

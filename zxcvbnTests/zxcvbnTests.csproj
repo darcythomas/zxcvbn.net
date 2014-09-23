@@ -35,9 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Jurassic, Version=2.1.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\zxcvbn.net\libs\Jurassic.dll</HintPath>
+    <Reference Include="Jurassic">
+      <HintPath>..\zxcvbn.net\bin\Release\Jurassic.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
