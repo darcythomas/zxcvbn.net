@@ -49,7 +49,7 @@
     <Reference Include="System" />
     <Reference Include="zxcvbn.net, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\zxcvbn.net.0.0.15\lib\net45\zxcvbn.net.dll</HintPath>
+      <HintPath>..\packages\zxcvbn.net.0.0.16\lib\net45\zxcvbn.net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
