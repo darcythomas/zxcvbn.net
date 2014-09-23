@@ -5,8 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
-using Jurassic;
-using Jurassic.Library;
+using JavaScriptEngineSwitcher.Core;
 using zxcvbn.net.Properties;
 
 
@@ -14,12 +13,14 @@ namespace zxcvbn.net
 {
     public class ZxcvbnInstance
     {
-        public ScriptEngine Engine { get { return LazyLoadEngine.Value; } }
-        private static readonly Lazy<ScriptEngine> LazyLoadEngine = new Lazy<ScriptEngine>(ScriptEngine);
+        public IJsEngine Engine { get { return LazyLoadEngine.Value; } }
+        private static readonly Lazy<IJsEngine> LazyLoadEngine = new Lazy<IJsEngine>(ScriptEngine);
 
-        private static ScriptEngine ScriptEngine()
+        private static IJsEngine ScriptEngine()
         {
-            ScriptEngine engine = new ScriptEngine();
+            //ScriptEngine engine = new ScriptEngine();
+
+            IJsEngine engine = JsEngineSwitcher.Current.CreateJsEngineInstance("V8JsEngine");
 
             //The global object 'exports', is needed for the zxcvbn.js lib. Used for scoping.
             engine.Execute("exports = {};");
@@ -62,9 +63,9 @@ namespace zxcvbn.net
 
 
 
-        public int crack_time(String password)
+        public double crack_time(String password)
         {
-            return CallJSzxcvbnFunction<int>(password, "crack_time");
+            return CallJSzxcvbnFunction<double>(password, "crack_time");
            
         }
         public String crack_time_display(String password)
