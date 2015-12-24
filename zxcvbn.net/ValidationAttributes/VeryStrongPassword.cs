@@ -16,7 +16,7 @@ namespace zxcvbn.net
         {
             var password = value as String;
             if (password == null) return new ValidationResult("A password is required.");
-            if (Zxcvbn.Score(password) == 4)
+            if (Zxcvbn.Score(password) < 4)
             {
                 return new ValidationResult("Password is not strong enough.");
             }
