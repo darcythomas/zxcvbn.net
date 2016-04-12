@@ -11,7 +11,7 @@ namespace PerformanceTest
     {
         static void Main(string[] args)
         {
-            Zxcvbn zxcvbn = new Zxcvbn();
+            ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
             zxcvbn.Entropy("LamePassword");
 
             for (int i = 0; i < 100; i++)
