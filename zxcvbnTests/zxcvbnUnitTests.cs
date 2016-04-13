@@ -49,7 +49,7 @@ namespace zxcvbnTests
             ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
 
             var actual = zxcvbn.crack_time(LamePassword);
-            const double expected = 0.003;
+            const double expected = 0.0379;
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
@@ -58,7 +58,7 @@ namespace zxcvbnTests
             ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
 
             var actual = zxcvbn.crack_time(ReasonablePassword);
-            const double expected = 2.442553556268167E+32;
+            const double expected = 9.269586128742398E+32;
             Assert.AreEqual(expected, actual, "actual: " + actual);
         }
 

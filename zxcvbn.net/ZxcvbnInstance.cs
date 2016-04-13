@@ -60,13 +60,9 @@ namespace zxcvbn.net
             return Engine.Evaluate<Double>("exports.zxcvbn('" + password + "').entropy");
         }
 
-
-
-
         public double crack_time(String password)
         {
-            return CallJSzxcvbnFunction<double>(password, "crack_time");
-           
+            return CallJSzxcvbnFunction<double>(password, "crack_times_seconds.offline_slow_hashing_1e4_per_second");     
         }
         public String crack_time_display(String password)
         {
