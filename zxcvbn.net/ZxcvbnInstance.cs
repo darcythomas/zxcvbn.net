@@ -41,7 +41,7 @@ namespace zxcvbn.net
         {
             const int maxLength = 4096;
             if (password.Length <= maxLength)
-                return Engine.Evaluate<T>(String.Format("exports.zxcvbn('{0}').{1}", password, func));
+                return Engine.Evaluate<T>(String.Format("zxcvbn('{0}').{1}", password, func));
 
             throw new InvalidDataException(String.Format(Resources.InvalidData_PasswordIsTooLong, maxLength));
         }
