@@ -9,7 +9,7 @@ namespace zxcvbnTests
     [TestClass]
     public class zxcvbnUnitTests
     {
-        const string LamePassword = "Passw0rd1!"; // 6 bits of entropy 
+        const string LamePassword = "Password1"; // 6 bits of entropy 
         const string ReasonablePassword = "Life is wasted on the living. -- Douglas Adams";
 
 
