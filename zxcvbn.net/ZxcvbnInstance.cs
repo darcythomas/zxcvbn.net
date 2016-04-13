@@ -55,9 +55,9 @@ namespace zxcvbn.net
 
         
 
-        public Double Entropy(String password)
+        public Double Guesses(String password)
         {
-            return Engine.Evaluate<Double>("exports.zxcvbn('" + password + "').entropy");
+            return CallJSzxcvbnFunction<double>(password, "guesses_log10");
         }
 
         public double crack_time(String password)

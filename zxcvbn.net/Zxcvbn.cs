@@ -19,7 +19,7 @@ namespace zxcvbn.net
 
         public static Double Entropy(String password)
         {
-            return Instance.Entropy(password);
+            return Instance.Guesses(password);
         }
 
         public static double crack_time(String password)

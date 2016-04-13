@@ -34,12 +34,12 @@ namespace zxcvbnTests
         }
 
         [TestMethod]
-        public void EntropyBasic()
+        public void GuessesBasic()
         {
             ZxcvbnInstance zxcvbn = new ZxcvbnInstance();
 
-            var actual = zxcvbn.Entropy(LamePassword);
-            const double expected = 6.0;
+            var actual = zxcvbn.Guesses(LamePassword);
+            const double expected = 2.5786392099680722;
             Assert.AreEqual(expected, actual);
         }
 
