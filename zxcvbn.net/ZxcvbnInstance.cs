@@ -68,6 +68,10 @@ namespace zxcvbn.net
         {
             return CallJSzxcvbnFunction<String>(password, "score");
         }
+        public string Warning(string password)
+        {
+            return CallJSzxcvbnFunction<string>(password, "feedback.warning");
+        }
 
         public List<String> match_sequence(String password)
         {
