@@ -37,6 +37,10 @@ x64/
 *.vssscc
 .builds
 
+#Nuget build results
+*.nupkg
+*.nupkg.bak
+
 # Visual C++ cache files
 ipch/
 *.aps
