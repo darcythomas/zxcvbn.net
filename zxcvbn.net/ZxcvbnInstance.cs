@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using JavaScriptEngineSwitcher.Core;
+using JavaScriptEngineSwitcher.V8;
 using zxcvbn.net.Properties;
 
 
@@ -13,14 +14,16 @@ namespace zxcvbn.net
 {
     public class ZxcvbnInstance
     {
-        public IJsEngine Engine { get { return LazyLoadEngine.Value; } }
+
         private static readonly Lazy<IJsEngine> LazyLoadEngine = new Lazy<IJsEngine>(ScriptEngine);
+        public IJsEngine Engine { get { return LazyLoadEngine.Value; } }
+
 
         private static IJsEngine ScriptEngine()
         {
             //ScriptEngine engine = new ScriptEngine();
 
-            IJsEngine engine = JsEngineSwitcher.Current.CreateJsEngineInstance("V8JsEngine");
+            IJsEngine engine = new V8JsEngine();
 
             //The global object 'exports', is needed for the zxcvbn.js lib. Used for scoping.
             engine.Execute("exports = {};");

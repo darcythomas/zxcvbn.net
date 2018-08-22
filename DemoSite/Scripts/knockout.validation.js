@@ -1,19 +1,3 @@
-/* NUGET: BEGIN LICENSE TEXT
- *
- * Microsoft grants you the right to use these script files for the sole
- * purpose of either: (i) interacting through your browser with the Microsoft
- * website or online service, subject to the applicable licensing or use
- * terms; or (ii) using the files as included with a Microsoft product subject
- * to that product's license terms. Microsoft reserves all other rights to the
- * files not expressly granted by Microsoft, whether by implication, estoppel
- * or otherwise. Insofar as a script file is dual licensed under GPL,
- * Microsoft neither took the code under GPL nor distributes it thereunder but
- * under the terms set out in this paragraph. All notices and licenses
- * below are for informational purposes only.
- *
- * Knockout Validation v1.0.1; Copyright Eric M. Barnard; http://opensource.org/licenses/MIT
- *
- * NUGET: END LICENSE TEXT */
 (function(){function o(a,b,c){a.isValidating(!0);b.validator(a(),c.params||!0,function(e){var d=!1,i="";if(a.__valid__()&&(e.message?(d=e.isValid,i=e.message):d=e,!d))a.error=ko.validation.formatMessage(i||c.message||b.message,c.params),a.__valid__(d);a.isValidating(!1)})}if(void 0===typeof ko)throw"Knockout is required, please ensure it is loaded before loading this validation plug-in";var j={registerExtenders:!0,messagesOnModified:!0,messageTemplate:null,insertMessages:!0,parseInputAttributes:!1,
 writeInputAttributes:!1,decorateElement:!1,errorClass:null,errorElementClass:"validationElement",errorMessageClass:"validationMessage",grouping:{deep:!1,observable:!0}},f=ko.utils.extend({},j),k=["required","pattern","min","max","step"],d,l=(new Date).getTime(),m={};d={isArray:function(a){return a.isArray||"[object Array]"===Object.prototype.toString.call(a)},isObject:function(a){return null!==a&&"object"===typeof a},values:function(a){var b=[],c;for(c in a)a.hasOwnProperty(c)&&b.push(a[c]);return b},
 getValue:function(a){return"function"===typeof a?a():a},hasAttribute:function(a,b){return null!==a.getAttribute(b)},isValidatable:function(a){return a.rules&&a.isValid&&a.isModified},insertAfter:function(a,b){a.parentNode.insertBefore(b,a.nextSibling)},newId:function(){return l+=1},getConfigOptions:function(a){return d.contextFor(a)||f},setDomData:function(a,b){var c=a.__ko_validation__;c||(a.__ko_validation__=c=d.newId());m[c]=b},getDomData:function(a){a=a.__ko_validation__;return!a?void 0:m[a]},

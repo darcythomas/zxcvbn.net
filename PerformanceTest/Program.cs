@@ -11,12 +11,11 @@ namespace PerformanceTest
     {
         static void Main(string[] args)
         {
-            Zxcvbn zxcvbn = new Zxcvbn();
-            zxcvbn.Entropy("LamePassword");
+            Zxcvbn.Entropy("LamePassword");
 
             for (int i = 0; i < 100; i++)
             {
-                zxcvbn.Entropy("LamePassword");
+                Zxcvbn.Entropy("LamePassword");
             }
         }
     }
