@@ -1,32 +1,29 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>zxcvbnNuget</id>
-    <version>1.0.0</version>
-    <title>zxcvbnNuget</title>
-    <authors>darcythomas</authors>
-    <owners></owners>
-    <description>
-      A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.
-    </description>
-    <releaseNotes>
-    </releaseNotes>
-    <summary>
-      A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.
-    </summary>
-    <language>en-US</language>
-    <projectUrl>https://nuget.org/packages/zxcvbnNuget</projectUrl>
-    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
-    <copyright>Copyright  2014</copyright>
-    <dependencies>
-        <group targetFramework="net40">
-          <dependency id="log4net" version="1.2.10" />
-        </group>
-    </dependencies>
-    <references></references>
-    <tags></tags>
+ <id>zxcvbn.net</id>
+        <version>0.0.16</version>
+        <title>zxcvbn.net</title>
+        <authors>darcyio</authors>
+        <owners>Darcy Thomas</owners>
+        <licenseUrl>https://raw2.github.com/darcythomas/zxcvbn.net/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/darcythomas/zxcvbn.net</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>This package allows you to check the realistic entropy (i.e., difficulty of a hacker to crack) of a given password. The package ports the original zxcvbn js library to .net. This means the suitability of a password can be checked server side. Further more the calculated entropy matches the calculations made client side with the original (included) zxcvbn js library.</description>
+        <summary>.Net port of the zxcvbn (https://github.com/dropbox/zxcvbn) js password entropy checking library.</summary>
+        <releaseNotes>The following files (components) are licensed under the MIT License:
+
+
+js/zxcvbn.js Copyright (c) 2012 Dropbox, Inc.
+(note this file is also embedded into zxcvbn.dll)
+
+js/zxcvbn-async.js Copyright (c) 2012 Dropbox, Inc.</releaseNotes>
+        <copyright>2014 (c) Darcy Thomas</copyright>
+        <language>en-US</language>
+        <tags>password entropy validation checking zxcvbn darcyio</tags>
+      <dependencies>
+            <dependency id="JavaScriptEngineSwitcher.V8" version="1.1.13" />
+        </dependencies>
   </metadata>
   <files>
     <file src="lib\" target="lib" />
